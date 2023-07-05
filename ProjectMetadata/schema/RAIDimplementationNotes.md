@@ -2,7 +2,7 @@
 
 Implementation is intended to validate with schema.org validator, and also be useful as JSON-LD. 
 
-The @id for the record identifies metadata record, there is an 'about' key,  and the @id for the object there is the RAID (or other URI) for the project.  see discussion [JSONLD-IDinSchemaOrgMetadata.md](#../../JSONLD-IDinSchemaOrgMetadata.md).
+The @id for the record identifies metadata record, there is an 'about' key,  and the @id for the object there is the RAID (or other URI) for the project.  see discussion [JSONLD-IDinSchemaOrgMetadata.md](../../JSONLD-IDinSchemaOrgMetadata.md).
 
 sdo:identifier is used for alternateIdentifiers as sdo:PropertyValue (an ESIP science on schema.org pattern). 
 
