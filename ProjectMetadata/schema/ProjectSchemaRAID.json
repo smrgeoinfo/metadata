@@ -223,7 +223,7 @@
     ],
     "definitions": {
         "PersonRole": {
-            "title": "Agent in Role",
+            "title": "Person in Role",
             "type": "object",
             "additionalProperties": true,
             "description": "object to represent a person who plays a role relative the project.",
@@ -250,10 +250,10 @@
             }
         },
         "OrganizationRole": {
-            "title": "Agent in Role",
+            "title": "Organization in Role",
             "type": "object",
             "additionalProperties": true,
-            "description": "object to represent a person who plays a role relative the project.",
+            "description": "object to represent an organization that plays a role relative the project.",
             "properties": {
                 "@type": {"const": "Role"},
                 "roleName": {
@@ -388,18 +388,17 @@
         },
         "AnnotatedText": {
             "title": "Localized string",
-            "description": "object for a string with a language property. use JSON-LD defined language property, add language scheme propert",
+            "description": "object for a string with a language property. use JSON-LD defined language property, add language scheme propert. There is no schema.org Class that has the required properties, so this value is not typed",
             "properties": {
-                "@language": {"type": "string"},
-                "languageScheme": {
+                "inLanguage": {
                     "type": "string",
-                    "description": "identifier for the vocabulary that defines the @language value string"
+                    "description": "use ISO639-1 two letter language code"
                 },
-                "@value": {"type": "string"},
-                "type": {"type": "string"},
+                "textValue": {"type": "string"},
+                "additionalType": {"type": "string"},
                 "startDate": {
                     "type": "string",
-                    "description": "start of time interval in which this label is used"
+                    "description": "start of time interval in which this text is valid"
                 },
                 "endDate": {"type": "string"}
             }
